@@ -1,7 +1,4 @@
-**Patrones de diseño
-
-  
-
+ 
 Singleton
 
 Intención:

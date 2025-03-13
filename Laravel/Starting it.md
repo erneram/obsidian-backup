@@ -35,7 +35,6 @@ valet park
 ```sh
 cd ~/Projects/inventory-system
 ```
-
 ###### (Opcional) Limpia la caché de Laravel si has realizado cambios o para asegurarte de que se carguen las configuraciones
 
 ```sh
