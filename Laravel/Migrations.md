@@ -6,16 +6,35 @@ Command that delete all tables and creates them again.
 - Reset the counter of "id"
 ```sh
 php artisan migrate:reset
-
 ```
 
-# Run migrations:
+# Create migration
 ---
-Run migrations to create all tables 
+```
+php artisan make:migration nombre_de_la_migracion
+```
+This command create a migration for a table, used to create tables, alter tables or any other thing to a table.
+
+## Create migration for an specific table
+```
+php artisan make:migration nombre_de_la_migracion --create=nombre_tabla
+```
+
+# Running migrations
+---
+```sh
+php artisan migrate
+```
+Run all migrations in the `database/migrations`folder
 
 ```sh
 php artisan migrate:fresh
 ```
-this command reset tables, ids. Ideal for starting again all the tables
+Reset tables, ids. Ideal for restarting all tables (Kind of dropping tables and creating them again) 
+> **You will lose all information**
 
+## To run a specific migrations do this:
+```
+php artisan migrate --path=database/migrations/2025_05_05_123456_nombre_archivo.php
+```
 
