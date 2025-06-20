@@ -38,3 +38,20 @@ Reset tables, ids. Ideal for restarting all tables (Kind of dropping tables and 
 php artisan migrate --path=database/migrations/2025_05_05_123456_nombre_archivo.php
 ```
 
+## Other types of migrations...
+
+```sh
+php artisan migrate --path=database/migrations/tenant
+```
+Used to run a migration from an specific directory `database/migrations/tenant`
+
+
+```sh
+php artisan migrate --database=mysql
+```
+Used to run a migration to a specific database configured in `config/database.php`
+
+```sh
+php artisan migrate --database=tenant --path=/database/migrations/tenant
+```
+Use both commands, from a specific directory and to a specific database

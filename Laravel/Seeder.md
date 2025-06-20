@@ -46,6 +46,10 @@ use this command to run more seeders but be sure that the seeder is inside `data
 ```sh
 php artisan db:seed
 ```
+or 
+```sh
+php artisan db:seed --database=tenant
+```
 
 `DatabaseSeeder.php`
 ```sh

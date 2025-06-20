@@ -39,6 +39,10 @@ Si es la primera vez que descargas el proyecto desde Git, asegúrate de instalar
 ```sh 
 composer install
 ```
+En dado caso el  composer .json no este actualizado con el .lock hacer:
+```sh
+composer update
+```
 
 Navega a la carpeta de tu proyecto Laravel:
 ```sh
