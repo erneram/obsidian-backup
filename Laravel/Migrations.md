@@ -10,14 +10,19 @@ php artisan migrate:reset
 
 # Create migration
 ---
-```
+```sh
 php artisan make:migration nombre_de_la_migracion
 ```
 This command create a migration for a table, used to create tables, alter tables or any other thing to a table.
 
 ## Create migration for an specific table
-```
+```sh
 php artisan make:migration nombre_de_la_migracion --create=nombre_tabla
+```
+
+## Create migration in a specific folder
+```sh
+php artisan make:migration create_users_table --path=database/migrations/tenants
 ```
 
 # Running migrations
@@ -34,7 +39,7 @@ Reset tables, ids. Ideal for restarting all tables (Kind of dropping tables and 
 > **You will lose all information**
 
 ## To run a specific migrations do this:
-```
+```sh
 php artisan migrate --path=database/migrations/2025_05_05_123456_nombre_archivo.php
 ```
 

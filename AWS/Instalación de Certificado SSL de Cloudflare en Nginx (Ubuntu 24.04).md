@@ -42,7 +42,7 @@
 	
 4. **Asegura los permisos correctos**:
    ```bash
-   sudo chmod 600 /etc/nginx/ssl/cloudflare.*
+   sudo chmod 600 /etc/ssl/cloudflare.*
    ```
 
 ---
