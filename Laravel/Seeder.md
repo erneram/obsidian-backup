@@ -1,4 +1,4 @@
-# Create a seeder:
+e# Create a seeder:
 ---
 This will create a .php inside `database/seeders/NameSeeder.php`
 ```sh

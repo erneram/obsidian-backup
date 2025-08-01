@@ -1,1 +1,1 @@
-Probando si se puede jaja
+Polimorphic relationships correactamente hechas en mis migrations

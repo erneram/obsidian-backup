@@ -48,7 +48,8 @@ php artisan migrate --path=database/migrations/2025_05_05_123456_nombre_archivo.
 ```sh
 php artisan migrate --path=database/migrations/tenant
 ```
-Used to run a migration from an specific directory `database/migrations/tenant`
+Used to run a migration from an specific directory 
+`database/migrations/tenant`
 
 
 ```sh

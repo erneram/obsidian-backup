@@ -1,7 +1,7 @@
-1. Software que en su ore son automatas, entienten circuitos digitales
-2. En un compilador, utiliza un analizador lexico (Automata finito)
-3. Procesar largas cantidades de texto (Automatas finitos)
-4. Modela una maquina de maquina de estados finitos
+	<1. Software que en su ore son automatas, entienten circuitos digitales
+1. En un compilador, utiliza un analizador lexico (Automata finito)
+2. Procesar largas cantidades de texto (Automatas finitos)
+3. Modela una maquina de maquina de estados finitos
 
 Maquina de estados finitos, modela protocolos de comunicación. 
 ![[Pasted image 20250702200117.png]]
@@ -34,15 +34,17 @@ Maquina de estados finitos, modela protocolos de comunicación.
 3. Lenguaje
 	Un lenguaje sobre ∑ es cualquier subconjunto de ∑
 	∑ = { a, b }
-	Cerradura Kleene sobre alfabeto
+	Cerradura Kleene sobre alfabet
 	∑^* = { ε, a, b, aa, ab, bb, ba, ... }
 		L = { aabb, babb } subconjunto construido a partir de la primera ∑
 	Operaciones de lenguajes
 	1. Union
 	2. Concatenación
 	3. Cerradura Kleene sobre lenguaje
-	4. Cerradura Positiva
+	4. Cerradura Positivas
 
+![[Pasted image 20250721182223.png]]
+| r* = ε + p+
 # Problemas vs Lenguajes
 ---
 Problema: 
@@ -103,3 +105,79 @@ Leer una cadena implica ir revisando la cadena uno por uno
 W = "110100" (hacer split masomenos)
 Ver estado iniciar (q1) y agarrar primer elemento "1", ver flechas y a donde es que lleva, si repite q1 o lleva a q2, siendo estas el (estado final). Ir haciendolo hasta terminar la cadena.
 La cadena pertenece cuando llega al estado final. Respondiendo "Yes" o "No"
+
+
+# Automatas finitos y Expresiones regulares
+---
+R <=> AF
+Construir "AF" a partir de "R"
+Contruir un Automata Finito No determinista
+1. Estado de aceptación
+2. No tenga arcos (solito al inicio)
+3. No salga transiciones del estado de aceptación (Final y ultimo)
+
+Mcnaughton Yamada Thompson Algoritmo
+INPUT: Expresión regular r de alfabeto Σ
+OUTPUT: Un NFA aceptado en L(r)
+METODO: Iniciar construyendo un arbol de la expresión
+
+## Automata con OR
+![[Pasted image 20250721180229.png]]
+
+## Automata con Concatenación
+![[Pasted image 20250721180313.png]]
+
+## Automata con CLEAN `*`
+![[Pasted image 20250721180332.png]]
+
+## Ejemplo con THOMPSON
+![[Pasted image 20250721180746.png]]
+![[Pasted image 20250721180755.png]]
+
+# Automata Finito a ER "LEMA DE ARDEN"
+---
+Forma de resolver ecuaciones que involucren ER
+![[Pasted image 20250721181136.png]]
+-  signo + es un OR
+DEMOSTRACIÓN
+
+r = q + rp
+r = qp*
+
+Meter la solución en a la expresión
+
+r = q + (qp*)p
+r = q (ε + (p*)p)    ε = 1
+r = q (ε + p+)
+r = qp*
+
+![[BDE3F804-8EFB-447B-9F4B-FEF3D4D20DD5.jpeg]]
+
+---
+# Lema de Arden
+
+![[Pasted image 20250723191910.png]]
+q1 = ε + q1(0 )
+Resolviendo 
+- r = q1
+- p = 0
+- q = ε
+Según lema r = qp* =>   q1 = ε0* => q1 = 0*
+
+q2 = q1(1) + q2(1) => 0*(1) + q2(1) 
+Resolviendo 
+- r = q2
+- p = 1
+- q = 0*
+Según lema q2 = 0*(1)(1)
+
+q3 = q2(0) + q3(0) + q3(1) => 0*(1)(1*)(0) + q3(m)
+Resolviendo 
+- r = 
+- p = 
+- q = 
+
+r = q1 | q2
+
+Resolviendo 
+
