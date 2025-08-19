@@ -4,47 +4,30 @@ https://markdownlivepreview.com/
 
 https://dillinger.io/
 
+## Notation:
+![[Pasted image 20250819092939.png]]
 
-[Laravel Alpine](./Laravel/Alpine.js)
+| Convenio de Denominación                         | Formato                |
+| ------------------------------------------------ | ---------------------- |
+| Camel Case (Lower Camel Case, Dromedary Case)    | `camelCase`            |
+| Kebab Case (Dash Case, Lisp Case, Spinal Case)   | `kebab-case`           |
+| Snake Case (Pothole Case)                        | `snake_case`           |
+| Pascal Case (Upper Camel Case, Studly Case)      | `PascalCase`           |
+| Flat Case                                        | `flatcase`             |
+| Upper Flat Case                                  | `UPPERFLATCASE`        |
+| Screaming Snake Case (Macro Case, Constant Case) | `SCREAMING_SNAKE_CASE` |
+| Camel Snake Case                                 | `camel_Snake_Case`     |
+| Pascal Snake Case                                | `Pascal_Snake_Case`    |
+| Train Case (HTTP Header Case)                    | `Train-Case`           |
+| Cobol Case (Screaming Kebab Case)                | `COBOL-CASE`           |
 
+# Index – pvault
 
-# Project Index – pvault
+## 1. [Server](./Server/Server.md)
+## 2. [CS](./CS/CS.md)
+## 3. [Backend](./Backend/Backend.md)
+## 4. [Frontend](./Frontend/Frontend.md)
+## 5. [Knowledge](./Knowledge/Knowledge.md)
+## 6. [Design Patterns](./DesignPatterns/DesignPatterns.md)
 
-## AWS
-- [Comprar Dominio](./AWS/Comprar%20Dominio.md)
-- [Instalación de Certificados](./AWS/Instalación%20de%20Ce....md)
-- [Server Deployment](./AWS/Server%20Deployme....md)
-
-## Backend
-- [Ver contenido](./Backend/)  
-
-## CS
-- [Ver contenido](./CS/)
-
-## Design Patterns
-- [Singleton](./Design%20Patterns/Singleton.md)
-
-## Frontend
-- [Deploy Project to...](./Frontend/Deploy%20Project%20to....md)
-- [Dom vs Virtual Dom](./Frontend/Dom%20vs%20Virtual%20D....md)
-- [Patrones de diseño](./Frontend/Patrones%20de%20diseño.md)
-- [Vite](./Frontend/Vite.md)
-
-## Knowledge
-- [Ver contenido](./Knowledge/)
-
-## Laravel
-- [Alpine.js](./Laravel/Alpine.js.md)
-- [Basics](./Laravel/Basics.md)
-- [Controllers](./Laravel/Controllers.md)
-- [Creating Laravel...](./Laravel/Creating%20Laravel%20....md)
-- [Factories](./Laravel/Factories.md)
-- [Inertia.js](./Laravel/Inertia.js.md)
-- [Launching](./Laravel/Launching.md)
-- [Migrations](./Laravel/Migrations.md)
-- [Models](./Laravel/Models.md)
-- [Seeder](./Laravel/Seeder.md)
-
-## Proyects
-- [Ver contenido](./Proyects/)
 

@@ -35,9 +35,13 @@ class InventoryMovementSeeder extends Seeder
 ```
 # Run seeder:
 ---
-Run this command for running a specific seeder
+Run a specific seeder
 ```sh
 php artisan db:seed --class=NameSeeder
+```
+Run a specific seeder for a specific database
+```sh
+php artisan db:seed --class=NameSeeder --database=database
 ```
 # Run more than one seeder:
 ---
