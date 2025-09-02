@@ -80,6 +80,11 @@ php artisan cache:clear
 php artisan route:clear 
 php artisan view:clear  
 ```
+Para versiones más antiguas utilizar:
+```
+php artisan optimize
+```
+
 Si Laravel sigue sin funcionar correctamente después de limpiar la caché, puedes intentar regenerar la clave de la aplicación:
 ```sh
 php artisan key:generate
