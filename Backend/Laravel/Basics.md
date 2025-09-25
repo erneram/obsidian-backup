@@ -32,3 +32,6 @@
 
 # Relations:  
 - Establece como se relacionan y conectan entre si los modelos, por ende, las tablas en la base de datos. (1:N) (N:M).
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

@@ -76,3 +76,6 @@ public function run(): void
 	\App\Models\Vehicle::factory()->count(20)->create(); 
 }
 ```
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

@@ -19,3 +19,5 @@ Que hace que un problema tenga solución?
 
 
 
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

@@ -181,3 +181,6 @@ r = q1 | q2
 
 Resolviendo 
 
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

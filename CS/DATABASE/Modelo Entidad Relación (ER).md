@@ -79,3 +79,6 @@ diseño que no escala bien para datos futuros
 Notación de Martin o Crow’s Foot
 
 ![image.png](attachment:d456b575-898d-452e-bfc4-d2d9e813566e:image.png)
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

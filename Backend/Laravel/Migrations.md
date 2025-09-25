@@ -60,4 +60,7 @@ Used to run a migration to a specific database configured in `config/database.ph
 ```sh
 php artisan migrate --database=tenant --path=/database/migrations/tenant
 ```
-Use both commands, from a specific directory and to a specific database
+Use both commands, from a specific directory and to a specific database.
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

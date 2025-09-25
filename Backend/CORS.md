@@ -38,3 +38,6 @@ Sucede cuando primero se envia al servidor un HTTP request utilizando el metodo 
 	Este devuelve un listado de los métodos HTTP que son permitidos hacer en la ruta que se enviaron.
 6. Access-Control-Allow-Headers
 	Se utiliza en la respuesta a una solicitud Preflighted para indicar que encabezados HTTP se pueden utilizar
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

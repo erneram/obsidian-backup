@@ -65,3 +65,6 @@ Soporte con JSON, altamente extensible, almacenar datos geograficos o general ge
 Curva de aprendizaje, mayor consumo de recursos
 
 ORACLE; AWS
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

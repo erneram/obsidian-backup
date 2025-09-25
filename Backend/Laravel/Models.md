@@ -73,3 +73,6 @@ public function personable()
     return $this->morphTo();
 }
 ```
+
+## ↩️ Volver al HOME
+- [[HOME|🏠 HOME del Vault]]

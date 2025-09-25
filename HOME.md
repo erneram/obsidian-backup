@@ -1,11 +1,43 @@
-https://www.markdownguide.org/basic-syntax/
+---
+title: HOME – pvault
+updated: 2025-09-25
+tags:
+  - home
+  - pvault
+  - índice
+---
+---
+title: HOME
+tags: [hub, index]
+---
 
-https://markdownlivepreview.com/
+> [!info] Recursos para estilizar Markdown
+> - https://www.markdownguide.org/basic-syntax/
+> - https://markdownlivepreview.com/
+> - https://dillinger.io/
+> 
+> *Los guardo arriba porque los uso para dar formato rápido a los .md.*
 
-https://dillinger.io/
+---
 
-## Notation:
+# 🧭 Índice del Vault
+
+1. [[Server/Server|Server]]
+2. [[CS/CS|CS]]
+3. [[Backend/Backend|Backend]]
+4. [[Frontend/Frontend|Frontend]]
+5. [[Knowledge/Knowledge|Knowledge]]
+6. [[DesignPatterns/DesignPatterns|Design Patterns]]
+
+---
+
+# ✍️ Notation
+
 ![[Pasted image 20250819092939.png]]
+
+---
+
+# 🧱 Convenciones de Nomenclatura
 
 | Convenio de Denominación                         | Formato                |
 | ------------------------------------------------ | ---------------------- |
@@ -21,13 +53,7 @@ https://dillinger.io/
 | Train Case (HTTP Header Case)                    | `Train-Case`           |
 | Cobol Case (Screaming Kebab Case)                | `COBOL-CASE`           |
 
-# Index – pvault
+---
 
-## 1. [Server](./Server/Server.md)
-## 2. [CS](./CS/CS.md)
-## 3. [Backend](./Backend/Backend.md)
-## 4. [Frontend](./Frontend/Frontend.md)
-## 5. [Knowledge](./Knowledge/Knowledge.md)
-## 6. [Design Patterns](./DesignPatterns/DesignPatterns.md)
-
-
+> [!tip] Sugerencia
+> Añade este archivo a tu lista de **Starred** en Obsidian para tenerlo siempre a un clic.

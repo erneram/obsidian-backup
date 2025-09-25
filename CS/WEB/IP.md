@@ -1,61 +1,72 @@
-IP identificador personal
+---
+title: Redes – IP, Puertos, HTTP y DNS
+tags: [networking, ip, http, dns]
+---
 
-Octeto 0 - 255 en cada octeto “xxx.xxx.x.x” (Poca escalabilidad a largo plazo; Quedarse sin direcciones IP)
+> [!summary] En 10 segundos
+> - **IP** identifica un dispositivo en una red. **IPv4** (32 bits) y **IPv6** (128 bits).
+> - **Puertos** identifican servicios en el host (0–65535).
+> - **HTTP** usa puertos 80/443 y métodos como **GET**/**POST**.
+> - **DNS** traduce nombres a IP y se configura con **registros** (A, AAAA, CNAME, MX, TXT).
 
-IPv4 Cuatro segmentos de números separados por puntos
+---
 
-IPv6 separación por 2 puntos y mas largas las direcciones
+# 1) Dirección IP
 
-Diseñado para soportar un número mucho mayor de dispositivos
+## 1.1 IPv4
+- Formato: `xxx.xxx.xxx.xxx` (4 octetos, **0–255** cada uno).
+- Ejemplo válido: `192.168.1.10`
+- Capacidad limitada ⇒ **poca escalabilidad** a muy largo plazo.
 
-Redes internas
+## 1.2 IPv6
+- Formato: 8 grupos hex separados por `:`  
+  Ej.: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
+- Se puede abreviar ceros: `2001:db8:85a3::8a2e:370:7334`
+- **Diseñado para soportar muchísimos más dispositivos.**
 
-Pueden existir mismas IP pero en diferentes redes.
+> [!tip] Redes internas vs externas
+> - **Red interna (LAN):** pueden existir **misma IP** en LANs diferentes (p. ej., `192.168.0.10` en dos casas distintas).
+> - **Red externa (Internet):** IP **pública** única hacia Internet.
 
-Redes externas
+---
 
-Puerto: Indicador del servicio que estoy corriendo (0 - 65535)
+# 2) Puertos
 
-0 - 1023: Puertos conocidos 80-HTTP, 23-telnet, 443-HTTPS
+Los puertos identifican **servicios** en un mismo host. Rango **0–65535**.
 
-1024 - 49151: Puerto registrados para aplicaciones (uso general)
+| Rango            | Nombre                               | Uso típico                               |
+|------------------|--------------------------------------|------------------------------------------|
+| 0–1023           | Puertos **conocidos** (well-known)   | 80=HTTP, 443=HTTPS, 23=Telnet, 22=SSH    |
+| 1024–49151       | Puertos **registrados**              | Apps/servicios de uso general            |
+| 49152–65535      | **Dinámicos/privados** (ephemeral)   | Conexiones temporales del cliente        |
 
-49152 - 65535: Puertos dinámicos o privados (puertos de nadie)
+> [!note] Concurrencia
+> Varias personas conectadas **al mismo tiempo** consumiendo un servicio (múltiples sockets/IP:puerto).
 
-Concurrencia: Multiples personas conectadas a la vez consumiendo
+---
 
-Para poner pagina en internet se necesita
+# 3) Poner una página en Internet (mínimos)
 
-1. Computadora con IP publica
+1) **Computadora/Servidor con IP pública** (o un VPS).  
+2) **Servicio HTTP/HTTPS** escuchando en **80/443**.  
+3) **Dominio** apuntando (DNS) a la IP pública.  
+4) (Recomendado) **Certificado TLS** (HTTPS – puerto 443).
 
-HTTP
+---
 
-Escucha el servidor HTTP las solicitudes del puerot 80 y devuelve
+# 4) HTTP (capa aplicación)
 
-GET: Solicita uin recurso del servidor como una pagina web
+- El servidor **escucha** en **80 (HTTP)** o **443 (HTTPS)**.
+- Métodos comunes:
+  - **GET** → Solicita un recurso (página, imagen, API read).
+  - **POST** → Envía datos al servidor (formularios, API write).
 
-POST: Envia datos al servidor, guardar información
+```http
+GET /index.html HTTP/1.1
+Host: ejemplo.com
 
-DNS:
+POST /api/contact HTTP/1.1
+Host: ejemplo.com
+Content-Type: application/json
 
-Domain Name System, traduce nombres de dominio legibles por humanos “[example.com](http://example.com)”
-
-Facilita la utilización de internet (no recordar la dirección ip)
-
-Gestionar dominios y subdominios
-
-Utilizan “Zones tables” donde estan los listados de dominios e ip (se compra el derecho de ponerse en esa tabla) Pagar dominio significa es resevar un espacio para ponerlo en el espacio de zonas existe una ip xx.x.x.x.x ⇒ Lo que se pago
-
-Configurar un dominio (en goDaddy)
-
-IPv4: A
-
-IPv6: AAAA
-
-Alias para otro dominio: CNAME
-
-Servidores de correo: MX
-
-Información adicional: TXT
-
-lan : Local Area Network
+{"name":"Sam","msg":"Hola"}
