@@ -38,7 +38,7 @@ Este es el índice principal del área **Backend**. Resume qué hay en la carpet
 - [[Backend/Laravel/Alpine.js|Alpine.js]] — “sprinkles” de interactividad en vistas.
 
 ### 5) Lenguaje y utilidades
-- [[Backend/Laravel/PHP|PHP]] — recordatorios del lenguaje aplicados a Laravel.
+- [[Php Snippet|Php Snippet]] — recordatorios del lenguaje aplicados a Laravel.
 - [[Backend/CORS|CORS]] — (en raíz de Backend) política CORS, configuración y debugging.
 
 > Si tienes más notas dentro de `Backend/Laravel/` (p.ej. “Creating Laravel …”), añádelas al grupo correspondiente arriba para mantener el flujo.

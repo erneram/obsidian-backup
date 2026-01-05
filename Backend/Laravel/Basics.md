@@ -1,3 +1,15 @@
+
+## Basic Commands for artisan
+
+```terminal
+php artisan optimize
+php artisan config:clear 
+php artisan cache:clear 
+php artisan route:clear 
+php artisan view:clear  
+```
+
+
 # Controladores: 
 - Manejan la logica de las solicitudes HTTP, reciben peticiones, interactúan con los modelos y devuelven respuestas (HTML o JSON).
 - Separan la logica de negocio haciendo el código mas ordenado y reutilizables. 
