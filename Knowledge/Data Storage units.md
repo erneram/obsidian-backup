@@ -1,0 +1,19 @@
+- **[Bit](https://www.google.com/search?q=Bit&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAB)**: The smallest unit (0 or 1).
+- **[Byte](https://www.google.com/search?q=Byte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAD) (B)**: 8 bits, enough for one character.
+- **Kilobyte (KB)**: ~1 thousand bytes (1,024 B).
+- **Megabyte (MB)**: ~1 million bytes (1,024 KB).
+- **[Gigabyte](https://www.google.com/search?q=Gigabyte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAH) (GB)**: ~1 billion bytes (1,024 MB).
+- **[Terabyte](https://www.google.com/search?q=Terabyte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAJ) (TB)**: ~1 trillion bytes (1,024 GB).
+- **[Petabyte](https://www.google.com/search?q=Petabyte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAL) (PB)**: ~1 quadrillion bytes (1,024 TB).
+- **[Exabyte](https://www.google.com/search?q=Exabyte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAN) (EB)**: ~1 quintillion bytes (1,024 PB).
+- **[Zettabyte](https://www.google.com/search?q=Zettabyte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAP) (ZB)**: ~1 sextillion bytes (1,024 EB).
+- **[Yottabyte](https://www.google.com/search?q=Yottabyte&oq=kb+mb+gb+tb+pb+eb+zb+meaning&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTA1NTRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&mstk=AUtExfDSuwDRKA2ugnh36s8dJrY5Zc1pTWhTAlnLBpEYkAZQpW3F8Rlkd9aaVRI2tbQasTuo_Z8uVNLqdLInP-Rgo1KxMF0V6BxKDZkmG4NVPotzuHTqzbu1Z_ZPqfIpoqAJVdFXIkdnEq3NBl92xljL8-2u5abgHMXTJXYqmJgqz0dkM3Y&csui=3&ved=2ahUKEwib4-TEjIeSAxXtRzABHYcVIj4QgK4QegQIAxAR) (YB)**: ~1 septillion bytes (1,024 ZB).
+
+![[Pasted image 20260114105316.png]]
+
+![[Pasted image 20260114105325.png]]
+
+![[Pasted image 20260114105334.png]]
+
+![[Pasted image 20260114105341.png]]
+

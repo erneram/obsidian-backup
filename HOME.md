@@ -33,7 +33,7 @@ tags: [hub, index]
 
 # ✍️ Notation
 
-![[Pasted image 20250819092939.png]]
+![[Pasted image 20260114105334.png]]
 
 ---
 
