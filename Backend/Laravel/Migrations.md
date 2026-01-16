@@ -57,10 +57,33 @@ php artisan migrate --database=mysql
 ```
 Used to run a migration to a specific database configured in `config/database.php`
 
+
 ```sh
 php artisan migrate --database=tenant --path=/database/migrations/tenant
 ```
 Use both commands, from a specific directory and to a specific database.
+
+
+# Tinker
+---
+When you want to check if a migration is done, its recomendable using tinker.
+
+```sh
+php artisan tinker
+```
+
+List of commands for you to check on tinker:
+
+Verify if a table exists:
+```php
+Schema::hasTable('users');
+```
+
+Secure way to delete tables:
+```php
+Schema::dropIfExists('users');
+```
+
 
 ## ↩️ Volver al HOME
 - [[HOME|🏠 HOME del Vault]]

@@ -1,11 +1,11 @@
 # Creating a model
 ---
 ```sh
-php artisan make:model Producto
+php artisan make:model Product
 ```
 This command will create a file inside `app/models`
 
-> when creating a model you should use singular and PascalCase; Producto, not Products
+> when creating a model you should use singular and PascalCase; Product, not Products
 
 For creating Model, Controller, Seeder, Migration at the same time use 
 ```sh
