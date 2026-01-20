@@ -8,7 +8,8 @@ tags:
 ---
 ---
 title: HOME
-tags: [hub, index]
+tags: [hub, index] 
+
 ---
 
 > [!info] Recursos para estilizar Markdown
@@ -22,7 +23,7 @@ tags: [hub, index]
 
 # 🧭 Índice del Vault
 
-1. [[Server/Server|Server]]
+1. [[Server|Server]]
 2. [[CS/CS|CS]]
 3. [[Backend/Backend|Backend]]
 4. [[Frontend/Frontend|Frontend]]
@@ -32,26 +33,25 @@ tags: [hub, index]
 ---
 
 # ✍️ Notation
-
-![[Pasted image 20260114105334.png]]
+![[Pasted image 20250819092939.png]]
 
 ---
 
 # 🧱 Convenciones de Nomenclatura
 
-| Convenio de Denominación                         | Formato                |
-| ------------------------------------------------ | ---------------------- |
-| Camel Case (Lower Camel Case, Dromedary Case)    | `camelCase`            |
-| Kebab Case (Dash Case, Lisp Case, Spinal Case)   | `kebab-case`           |
-| Snake Case (Pothole Case)                        | `snake_case`           |
-| Pascal Case (Upper Camel Case, Studly Case)      | `PascalCase`           |
-| Flat Case                                        | `flatcase`             |
-| Upper Flat Case                                  | `UPPERFLATCASE`        |
-| Screaming Snake Case (Macro Case, Constant Case) | `SCREAMING_SNAKE_CASE` |
-| Camel Snake Case                                 | `camel_Snake_Case`     |
-| Pascal Snake Case                                | `Pascal_Snake_Case`    |
-| Train Case (HTTP Header Case)                    | `Train-Case`           |
-| Cobol Case (Screaming Kebab Case)                | `COBOL-CASE`           |
+| Convenio de Denominación                         | Formato               |
+| ------------------------------------------------ | --------------------- |
+| Camel Case (Lower Camel Case, Dromedary Case)    | `camelCase`           |
+| Kebab Case (Dash Case, Lisp Case, Spinal Case)   | `kebab-case`          |
+| Snake Case (Pothole Case)                        | `snake_case`          |
+| Pascal Case (Upper Camel Case, Studly Case)      | `PascalCase`          |
+| Flat Case                                        | `flatcase`            |
+| Upper Flat Case                                  | `UPPERFLATCASE`       |
+| Screaming Snake Case (Macro Case, Constant Case) | `SCREAMING_SNAK_CASE` |
+| Camel Snake Case                                 | `camel_Snake_Case`    |
+| Pascal Snake Case                                | `Pascal_Snake_Case`   |
+| Train Case (HTTP Header Case)                    | `Train-Case`          |
+| Cobol Case (Screaming Kebab Case)                | `COBOL-CASE`          |
 
 ---
 

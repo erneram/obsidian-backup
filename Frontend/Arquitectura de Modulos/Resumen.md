@@ -1,5 +1,3 @@
-Este documento resume la estructura de carpetas de un módulo y las diferencias entre cada capa, con analogías de la vida real para facilitar su comprensión.
-
 ## 🏗️ Estructura completa de un módulo
 
 ```
