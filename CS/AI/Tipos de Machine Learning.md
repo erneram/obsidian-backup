@@ -90,13 +90,13 @@ El aprendizaje semisupervisado combina características de supervisado y no supe
 
 ## 🧠 Resumen de Tipos
 
-| Tipo de aprendizaje | Necesita etiquetas | Uso principal |
-|---------------------|------------------|----------------|
-| Supervisado         | Sí               | Predicción con objetivo definido |
-| No supervisado      | No               | Descubrir patrones en datos   |
-| Autosupervisado     | No               | Entrenar a partir de datos crudos |
-| Refuerzo            | No (evaluación por recompensas) | Aprender estrategias |
-| Semisupervisado     | Parcialmente     | Combinar aprendizaje guiado y no guiado |
+| Tipo de aprendizaje | Necesita etiquetas              | Uso principal                           |
+| ------------------- | ------------------------------- | --------------------------------------- |
+| Supervisado         | Sí                              | Predicción con objetivo definido        |
+| No supervisado      | No                              | Descubrir patrones en datos             |
+| Autosupervisado     | No                              | Entrenar a partir de datos crudos       |
+| Refuerzo            | No (evaluación por recompensas) | Aprender estrategias                    |
+| Semisupervisado     | Parcialmente                    | Combinar aprendizaje guiado y no guiado |
 
 ---
 
