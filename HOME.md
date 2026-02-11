@@ -1,5 +1,6 @@
 ---
 title: HOME – pvault
+Description: Lo que no se mide, no se mejora.
 updated: 2025-09-25
 tags:
   - home
