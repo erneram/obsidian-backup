@@ -92,3 +92,8 @@ When getting the data you can use methods like:
 - `load('relation')` → Lazy eager load relationships.
     
 - `loadCount('relation')` → Lazy eager load relationship count.
+
+
+# bcrypt on thinker
+
+```
