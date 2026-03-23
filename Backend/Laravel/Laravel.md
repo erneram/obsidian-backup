@@ -50,6 +50,7 @@ tags: [hub, laravel, backend]
 
 - [[Backend/Laravel/Queues/Jobs|Jobs]] — qué es un Job, cuándo usarlos, dispatch, reintentos, chains, batches.
 - [[Backend/Laravel/Queues/Jobs + Predis|Jobs + Predis]] — cómo Redis almacena, distribuye y monitorea los Jobs.
+- [[Backend/Laravel/Queues/Horizon|Horizon]] — dashboard de queues: workers, métricas, failed jobs y auto-scaling.
 
 ---
 

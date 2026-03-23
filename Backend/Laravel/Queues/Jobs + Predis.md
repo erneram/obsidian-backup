@@ -5,236 +5,178 @@ tags: [laravel, jobs, redis, predis, queues, async]
 
 # 🔗 Jobs + Predis — Cómo se relacionan
 
-Un **Job** define *qué* hay que hacer. **Redis (Predis)** define *dónde* se guarda y *cómo* se distribuye el trabajo. Son la misma moneda, dos caras.
-
-Sin Redis, los Jobs solo pueden correr de forma síncrona o guardar en una tabla MySQL (lento). Con Redis, los Jobs se procesan en paralelo, a escala, con reintentos automáticos y visibilidad en tiempo real.
-
----
-
-## El flujo completo
-
-```
-Tu código llama dispatch()
-        │
-        ▼
-Laravel serializa el Job (clase PHP → JSON)
-        │
-        ▼
-Predis lo escribe en Redis db:0
-  KEY: queues:emails  →  [job1, job2, job3...]
-        │
-        ▼
-Worker (queue:work / Horizon) hace BLPOP en Redis
-  Redis entrega el siguiente job de la lista
-        │
-        ▼
-Laravel deserializa el JSON → reconstruye la clase PHP
-        │
-        ├── handle() exitoso → Redis elimina el job
-        │
-        └── handle() lanza excepción
-                │
-                ├── quedan reintentos → Redis lo reencola con delay (backoff)
-                │
-                └── se agotaron reintentos → tabla failed_jobs en MySQL
-```
+> [!example] La analogía
+> Imagina una cocina de restaurante.
+> El **mesero** toma el pedido del cliente y lo pone en una **bandeja** en la ventana de cocina — no espera a que la comida esté lista, regresa de inmediato a atender otra mesa.
+> El **cocinero** ve la bandeja, prepara el plato y lo entrega cuando está listo.
+>
+> En Laravel: el **mesero** es tu código, la **bandeja** es Redis, y el **cocinero** es el worker.
 
 ---
 
-## Configuración que los une
+## El problema que resuelven juntos
 
-```env
-# .env — los dos settings críticos
-QUEUE_CONNECTION=redis     # Jobs van a Redis, no a MySQL ni sync
-REDIS_HOST=127.0.0.1
-REDIS_PORT=6379
+Algunas acciones en tu app toman tiempo: enviar un email, mandar una notificación push, actualizar un índice de búsqueda. Si las haces en el mismo momento que el usuario aprieta un botón, ese usuario tiene que *esperar* a que todo termine.
+
+**Sin Jobs + Redis:**
 ```
+Usuario aprueba algo → tu app envía email → envía push → actualiza índice → responde "listo"
+                 ↑_________________ el usuario espera 3-5 segundos _________________↑
+```
+
+**Con Jobs + Redis:**
+```
+Usuario aprueba algo → tu app responde "listo" en <100ms ✓
+                              ↓
+                    Redis guarda las tareas pendientes
+                              ↓
+                    Workers las hacen en background, solos
+```
+
+El usuario ya está en otra pantalla cuando los emails salen. Nunca sintió la espera.
+
+---
+
+## ¿Cómo funciona paso a paso?
+
+### 1. Tu código crea el Job y lo despacha
 
 ```php
-// config/database.php — Redis db:0 es exclusivo para queues
-'redis' => [
-    'client' => 'predis',
-
-    'default' => [
-        'database' => '0',   // ← aquí viven los Jobs en cola
-    ],
-    'cache' => [
-        'database' => '1',   // ← separado, solo para Cache::remember()
-    ],
-]
+// Esto es todo lo que tú escribes
+SendWelcomeEmail::dispatch($user);
 ```
 
-```php
-// config/queue.php — cómo Laravel habla con Redis para queues
-'connections' => [
-    'redis' => [
-        'driver'     => 'redis',
-        'connection' => 'default',    // usa redis.default (db:0)
-        'queue'      => ['emails', 'notifications', 'default'],
-        'retry_after' => 90,          // segundos antes de considerar el job muerto
-        'block_for'   => null,
-    ],
-]
-```
+En este momento, Laravel **no ejecuta el email**. Solo le dice a Redis: *"oye, guarda esta tarea, alguien la hará después"*.
 
 ---
 
-## Qué guarda Redis exactamente
+### 2. Redis lo guarda en una lista de espera
 
-Cuando haces `SendWelcomeEmail::dispatch($user)`, Redis almacena algo así:
+Redis es una base de datos en memoria (muy rápida). Internamente tiene listas por tipo de tarea:
 
-```json
-{
-  "uuid": "abc-123",
-  "displayName": "App\\Jobs\\SendWelcomeEmail",
-  "job": "Illuminate\\Queue\\CallQueuedHandler@call",
-  "data": {
-    "commandName": "App\\Jobs\\SendWelcomeEmail",
-    "command": "O:30:\"App\\Jobs\\SendWelcomeEmail\":1:{s:4:\"user\";...}"
-  },
-  "attempts": 0,
-  "maxTries": 3,
-  "backoff": 60,
-  "timeout": 30,
-  "pushedAt": 1700000000.123
-}
+```
+Redis db:0
+  queues:emails         → [tarea1, tarea2, tarea3...]
+  queues:notifications  → [tarea4]
+  queues:default        → [tarea5, tarea6...]
 ```
 
-El Job se serializa completo — incluyendo los modelos Eloquent que le pasaste. El worker lo deserializa y reconstruye el objeto para ejecutarlo.
+Cada "tarea" es el Job convertido a texto (JSON) con toda la información que necesita para ejecutarse — incluyendo el usuario que le pasaste.
+
+> [!info] ¿Por qué Redis y no MySQL?
+> Podrías guardar los jobs en una tabla de MySQL, pero Redis vive en RAM y es mucho más rápido. La diferencia es como comparar buscar algo en tu escritorio vs ir al archivo del sótano.
 
 ---
 
-## El worker: el proceso que une todo
+### 3. El worker está mirando Redis todo el tiempo
+
+El worker es un proceso PHP que corre en el servidor, **siempre activo**, esperando que lleguen tareas:
 
 ```bash
-# El worker escucha Redis y ejecuta jobs continuamente
 php artisan queue:work redis --queue=emails,notifications,default
 ```
 
-Internamente hace un loop:
+Cuando Redis tiene un job en la lista, el worker lo agarra, lo ejecuta y lo borra de Redis. Si no hay nada, espera.
 
 ```
-loop:
-  job = Redis.BLPOP('queues:emails', timeout=5)   ← espera hasta 5s por un job
-  if job:
-    ejecuta job.handle()
-    if éxito:  Redis.DEL(job)
-    if falla:  job.attempts++
-               if attempts < maxTries: Redis.ZADD('queues:emails:delayed', ...)
-               else: INSERT INTO failed_jobs ...
-  goto loop
+Worker: "¿Hay algo en emails?"   Redis: "Sí, aquí tienes"  → Worker ejecuta → borra de Redis
+Worker: "¿Hay algo en emails?"   Redis: "No"               → Worker espera...
+Worker: "¿Hay algo en emails?"   Redis: "No"               → Worker espera...
+Worker: "¿Hay algo en emails?"   Redis: "Sí, aquí tienes"  → Worker ejecuta → borra de Redis
 ```
-
-> [!warning] El worker no se reinicia solo
-> Si el worker muere (por OOM, deploy, etc.), los jobs se quedan en Redis sin procesar.
-> En producción siempre usar **Supervisor** o **Horizon** para que el worker se reinicie automáticamente.
 
 ---
 
-## Horizon: el panel que hace todo visible
+### 4. ¿Qué pasa si el Job falla?
 
-Horizon es el puente de observabilidad entre Jobs y Redis. Reemplaza a `queue:work` en producción.
+Cosas pasan — el servidor de email puede estar caído, hay un error en el código, se cortó la conexión. Redis lo maneja:
 
-```bash
-composer require laravel/horizon
-php artisan horizon:install
-php artisan horizon          # arranca workers + dashboard
 ```
+Job falla
+  ↓
+¿Tiene reintentos disponibles?
+  ├── SÍ → Redis espera unos segundos y vuelve a intentarlo
+  └── NO → el Job va a la tabla "failed_jobs" en MySQL para que puedas revisarlo
+```
+
+Tú defines cuántos reintentos quieres en el Job:
 
 ```php
-// config/horizon.php — define cuántos workers por queue
-'environments' => [
-    'production' => [
-        'supervisor-1' => [
-            'connection' => 'redis',
-            'queue'      => ['emails', 'notifications', 'default'],
-            'balance'    => 'auto',       // auto-escala workers según carga
-            'processes'  => 5,
-            'tries'      => 3,
-        ],
-    ],
-],
-```
-
-**Qué muestra Horizon en `/horizon`:**
-
-| Métrica | Qué significa |
-|---------|---------------|
-| Jobs procesados/min | Throughput actual de los workers |
-| Jobs fallidos | Cuántos agotaron sus reintentos |
-| Tiempo promedio | Cuánto tarda cada Job en ejecutarse |
-| Jobs pendientes | Cuántos esperan en Redis ahora mismo |
-| Workers activos | Cuántos procesos PHP consumen la cola |
-
----
-
-## Visibilidad directa en Redis
-
-```bash
-redis-cli -n 0   # conectar a db:0 (queues)
-
-# Ver cuántos jobs hay en cada queue
-LLEN queues:emails
-LLEN queues:notifications
-LLEN queues:default
-
-# Ver el primer job sin sacarlo
-LINDEX queues:emails 0
-
-# Ver jobs con delay (reintentando)
-ZRANGE queues:emails:delayed 0 -1 WITHSCORES
-```
-
----
-
-## Jobs + Redis en la práctica real
-
-### Escenario: aprobación de permiso con 4 efectos secundarios
-
-```php
-// PermissionService.php
-public function approve(Permission $permission): void
+class SendWelcomeEmail implements ShouldQueue
 {
-    $permission->update(['status' => 'approved']);   // MySQL — síncrono
-
-    // Todo lo demás: asíncrono a Redis
-    SendPermissionApprovedEmail::dispatch($permission)->onQueue('emails');
-    SendPermissionPushNotification::dispatch($permission)->onQueue('notifications');
-    UpdateMeilisearchIndex::dispatch($permission->student)->onQueue('default');
-    NotifyDriverJob::dispatch($permission)->onQueue('notifications');
+    public int $tries = 3;      // intenta 3 veces antes de darse por vencido
+    public int $backoff = 60;   // espera 60 segundos entre cada intento
 }
 ```
 
-**Lo que ocurre en Redis:**
+---
 
-```
-queues:emails        → [SendPermissionApprovedEmail]
-queues:notifications → [SendPermissionPushNotification, NotifyDriverJob]
-queues:default       → [UpdateMeilisearchIndex]
-```
+## Horizon: ver todo lo que pasa
 
-**El usuario recibe respuesta en `<100ms`.**
-Los 4 workers procesan en paralelo en background.
+Correr workers con `queue:work` es como manejar a ciegas — no sabes si están vivos, cuántas tareas hay pendientes o cuántas fallaron.
+
+**Horizon** es el tablero de control. Lo instalas una vez y te da un panel en `/horizon` donde puedes ver en tiempo real:
+
+- Cuántos jobs se están procesando por minuto
+- Cuántos fallaron y por qué
+- Cuánto tiempo tarda cada tipo de job
+- Cuántos jobs están esperando en Redis ahora mismo
+
+> [!tip] Horizon también reinicia los workers solos
+> Si un worker se muere (por un deploy, falta de memoria, etc.), Horizon lo detecta y levanta uno nuevo. Sin Horizon, los jobs se quedan parados en Redis sin que nadie los procese.
+> Ver [[Backend/Laravel/Queues/Horizon|Horizon]] para la guía completa.
 
 ---
 
-## Resumen de responsabilidades
+## Un ejemplo real completo
 
-| Componente | Rol |
-|-----------|-----|
-| **Job** (`ShouldQueue`) | Define qué trabajo hay que hacer |
-| **`dispatch()`** | Lo serializa y lo manda a Redis |
-| **Redis db:0** | Lo guarda en lista FIFO por queue |
-| **Worker / Horizon** | Consume Redis y ejecuta el Job |
-| **`failed_jobs`** | Tabla MySQL de Jobs que fallaron definitivamente |
+Un padre aprueba el permiso de su hijo en la app. En ese momento necesitan pasar 4 cosas:
+
+```php
+public function approve(Permission $permission): void
+{
+    // Esto sí es inmediato — actualizar en MySQL
+    $permission->update(['status' => 'approved']);
+
+    // Esto va a Redis — no bloquea al usuario
+    SendApprovalEmail::dispatch($permission)->onQueue('emails');
+    SendPushNotification::dispatch($permission)->onQueue('notifications');
+    NotifyDriverJob::dispatch($permission)->onQueue('notifications');
+    UpdateSearchIndex::dispatch($permission->student)->onQueue('default');
+}
+```
+
+**Lo que el usuario vive:** aprieta aprobar, la pantalla responde en menos de un segundo.
+
+**Lo que pasa en Redis mientras tanto:**
+
+```
+queues:emails         → [SendApprovalEmail]
+queues:notifications  → [SendPushNotification, NotifyDriverJob]
+queues:default        → [UpdateSearchIndex]
+```
+
+Tres workers distintos agarran cada lista y procesan en paralelo. En 2-3 segundos todo está hecho, sin que el usuario haya esperado nada.
+
+---
+
+## En resumen
+
+| Quién | Qué hace |
+|-------|----------|
+| **Tu código** | Crea el Job y llama `dispatch()` — su trabajo termina ahí |
+| **Redis** | Guarda la tarea en una lista, la entrega al worker cuando esté listo |
+| **Worker** | Está siempre corriendo, agarra tareas de Redis y las ejecuta |
+| **Horizon** | Vigila a los workers, los reinicia si mueren, muestra métricas |
+| **`failed_jobs`** | Donde terminan los jobs que fallaron demasiadas veces |
 
 ---
 
 ## Ver también
 
-- [[Backend/Laravel/Queues/Jobs|Jobs]] — crear, despachar, chains, batches.
+- [[Backend/Laravel/Queues/Jobs|Jobs]] — cómo crear y configurar Jobs.
 - [[Backend/Laravel/Packages/Predis|Predis (Redis)]] — configuración completa de Redis en Laravel.
-- [[Backend/Laravel/Packages/Meilisearch + Predis|Meilisearch + Predis]] — otro ejemplo de Redis como capa async.
+- [[Backend/Laravel/Packages/Meilisearch + Predis|Meilisearch + Predis]] — otro caso donde Redis actúa de capa async.
 
 ---
 
