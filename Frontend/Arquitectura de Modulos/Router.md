@@ -383,3 +383,8 @@ import FeatureIndex from '../views/FeatureIndex.vue'
 export { featureRoutes } from './index'
 export { authGuard, roleGuard } from './guards'
 ```
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

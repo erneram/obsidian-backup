@@ -9,5 +9,5 @@ Ventajas:
 - Facilidad de integrar con Blade:
   Naturaleza minimalista, integra de forma natural con pantallas Blade, permitiendo tener una experiencia "*server-driven*" pero con interactividad en el cliente.
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

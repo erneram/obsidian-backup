@@ -213,3 +213,8 @@ Y como cada vez que hacemos cambios a un archivo de config, debemos reiniciar el
 ```
 service nginx restart
 ```
+
+---
+
+## ↩️ Navegación
+- [[Server/AWS/AWS|☁️ AWS]] → [[Server/Server|🖥️ Server]] → [[HOME|🏠 HOME]]

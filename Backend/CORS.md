@@ -39,5 +39,5 @@ Sucede cuando primero se envia al servidor un HTTP request utilizando el metodo 
 6. Access-Control-Allow-Headers
 	Se utiliza en la respuesta a una solicitud Preflighted para indicar que encabezados HTTP se pueden utilizar
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

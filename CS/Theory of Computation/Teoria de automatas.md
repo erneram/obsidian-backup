@@ -182,5 +182,5 @@ r = q1 | q2
 Resolviendo 
 
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[CS/Theory of Computation/Theory|🧮 Theory]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

@@ -148,3 +148,8 @@ Un valor más bajo indica mejores agrupaciones.
 ## Conclusión
 
 Las métricas de evaluación son fundamentales para medir el desempeño real de un modelo de Machine Learning. Elegir la métrica correcta depende del tipo de problema y del objetivo del modelo, ya que una mala elección puede llevar a conclusiones incorrectas sobre su desempeño.
+
+---
+
+## ↩️ Navegación
+- [[CS/AI/ML|🤖 ML Hub]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

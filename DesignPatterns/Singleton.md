@@ -150,3 +150,7 @@ func main() {
 	fmt.Scanln()
 }
 ```
+---
+
+## ↩️ Navegación
+- [[DesignPatterns/DesignPatterns|🏛️ Design Patterns]] → [[HOME|🏠 HOME]]

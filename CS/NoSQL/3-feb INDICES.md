@@ -26,3 +26,8 @@ Drop
 Hide
 	hideIndex (poner una data sin que el manejador sepa que existe, generalmente en performance)
 
+
+---
+
+## ↩️ Navegación
+- [[CS/NoSQL/NoSQL|📦 NoSQL]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

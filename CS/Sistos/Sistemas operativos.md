@@ -33,3 +33,8 @@ Pantallazo azul
 
 
 
+
+---
+
+## ↩️ Navegación
+- [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

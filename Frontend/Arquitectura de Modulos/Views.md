@@ -412,3 +412,8 @@ const { items, fetchItems } = useItems()
 ```
 
 La view `FeatureIndex.vue` se carga cuando el usuario navega a `/features`.
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

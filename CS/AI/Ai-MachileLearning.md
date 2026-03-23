@@ -99,3 +99,8 @@ Un agente aprende interactuando con un entorno y recibe recompensas o penalizaci
 ## 📌 Conclusión
 
 Machine Learning es una tecnología clave en la era digital. Permite analizar grandes volúmenes de datos, automatizar decisiones y crear sistemas inteligentes que se adaptan con el tiempo. Su aplicación abarca desde recomendaciones de contenido y detección de fraudes hasta medicina, finanzas y conducción autónoma.
+
+---
+
+## ↩️ Navegación
+- [[CS/AI/ML|🤖 ML Hub]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

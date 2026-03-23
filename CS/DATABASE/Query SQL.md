@@ -6,5 +6,5 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE COLUMN_NAME = 'your_column_name';
 ```
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[CS/DATABASE/Database|🗄️ Database]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

@@ -97,3 +97,8 @@ When getting the data you can use methods like:
 # bcrypt on thinker
 
 ```
+
+---
+
+## ↩️ Navegación
+- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

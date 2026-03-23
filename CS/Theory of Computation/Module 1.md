@@ -19,5 +19,5 @@ Que hace que un problema tenga solución?
 
 
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[CS/Theory of Computation/Theory|🧮 Theory]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

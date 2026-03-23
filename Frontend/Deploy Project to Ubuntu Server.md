@@ -93,3 +93,8 @@ sudo systemctl reload nginx
 ```
 
 
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[Server/Server|🖥️ Server]] → [[HOME|🏠 HOME]]

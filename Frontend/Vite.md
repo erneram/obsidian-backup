@@ -25,3 +25,7 @@
 	   Se aplican técnicas de tree-shaking, minificación y división de código para generar recursos que se carguen rápidamente.
 
 ***
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

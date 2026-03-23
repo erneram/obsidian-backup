@@ -38,3 +38,7 @@ Primero, haces un plano o maqueta del diseño antes de pintar en la pared:
 2. Comparas el nuevo diseño con el diseño previo de la pared.
 3. Solo cuando estás seguro de que el triángulo está en la posición correcta y con las medidas adecuadas, pintas directamente sobre la pared.
 4. El resultado es más eficiente y evita errores, ya que no estás ajustando la figura directamente sobre la pared.
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

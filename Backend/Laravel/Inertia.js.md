@@ -13,5 +13,5 @@ Es una librería que actúa como "puente" entre el backend y el frontend, permit
 Es un integración porque no tiene un framework frontend independiente ni un framework de backend si no que conecta ambos mundos.
 ***
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

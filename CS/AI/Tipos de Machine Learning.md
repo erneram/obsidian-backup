@@ -106,3 +106,8 @@ Los distintos tipos de Machine Learning ofrecen herramientas adaptadas a diferen
 
 ---
 
+
+---
+
+## ↩️ Navegación
+- [[CS/AI/ML|🤖 ML Hub]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

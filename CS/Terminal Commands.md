@@ -291,6 +291,6 @@ sed -i.bak -E 's/http:/https:/g' rutas.txt
 
 ---
 
-## ↩️ Volver al HOME
+## ↩️ Navegación
 
-- [[HOME|🏠 HOME del Vault]]
+- [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

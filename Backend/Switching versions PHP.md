@@ -13,3 +13,7 @@ switch-php 7.4
 
 Be sure to have the snipped activated 
 - [[Php Snippet|Php Snippet]]
+---
+
+## ↩️ Navegación
+- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

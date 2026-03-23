@@ -275,3 +275,8 @@ vi.mock('../infrastructure/FeatureRepository', () => ({
   }
 }))
 ```
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

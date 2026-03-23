@@ -80,5 +80,5 @@ Notación de Martin o Crow’s Foot
 
 ![image.png](attachment:d456b575-898d-452e-bfc4-d2d9e813566e:image.png)
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[CS/DATABASE/Database|🗄️ Database]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

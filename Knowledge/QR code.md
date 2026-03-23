@@ -4,3 +4,7 @@ Type of two-dimensional matrix barcode, invented in 1994 by Masahiro Hara (Japan
 ---
 ## Functionality
 Features back squares on a white background with fiducial markers.
+---
+
+## ↩️ Navegación
+- [[Knowledge/Knowledge|🧠 Knowledge]] → [[HOME|🏠 HOME]]

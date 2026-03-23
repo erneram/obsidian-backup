@@ -270,3 +270,8 @@ modules/
 > **"Cada archivo debe tener una sola responsabilidad clara"**
 
 Si no puedes describir en una oración qué hace un archivo, probablemente hace demasiado y debería dividirse.
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

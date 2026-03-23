@@ -248,3 +248,8 @@ onMounted(() => {
   </ul>
 </template>
 ```
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

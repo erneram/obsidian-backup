@@ -24,12 +24,16 @@ tags: [hub, index]
 
 # 🧭 Índice del Vault
 
-1. [[Server|Server]]
-2. [[CS/CS|CS]]
-3. [[Backend/Backend|Backend]]
-4. [[Frontend/Frontend|Frontend]]
-5. [[Knowledge/Knowledge|Knowledge]]
-6. [[DesignPatterns/DesignPatterns|Design Patterns]]
+| # | Área | Descripción |
+|---|------|-------------|
+| 1 | [[Backend/Backend\|🛠️ Backend]] | Laravel, PHP, CORS, Eloquent |
+| 2 | [[Frontend/Frontend\|🎨 Frontend]] | Vue 3, Vite, Arquitectura de Módulos |
+| 3 | [[CS/CS\|💻 CS]] | Bases de datos, redes, ML, teoría, terminal |
+| 4 | [[Server/Server\|🖥️ Server]] | AWS, EC2, Nginx, SSL, dominios |
+| 5 | [[DesignPatterns/DesignPatterns\|🏛️ Design Patterns]] | Singleton, Factory, patrones GoF |
+| 6 | [[Knowledge/Knowledge\|🧠 Knowledge]] | Data storage, QR codes, Y2K38 |
+| 7 | [[Projects/Projects\|🚀 Projects]] | SchoolAid, Clinic Management |
+| 8 | [[Tools/Tools\|🔧 Tools]] | Claude Code, workflow |
 
 ---
 

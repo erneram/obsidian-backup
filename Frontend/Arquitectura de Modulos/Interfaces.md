@@ -370,3 +370,8 @@ type UserStatus = 'active' | 'inactive'
 type UserOrNull = User | null
 type UserArray = User[]
 ```
+
+---
+
+## ↩️ Navegación
+- [[Frontend/Frontend|🎨 Frontend]] → [[HOME|🏠 HOME]]

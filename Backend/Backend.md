@@ -22,7 +22,8 @@ Este es el índice principal del área **Backend**. Resume qué hay en la carpet
 
 ### 1) Setup & proyecto
 - [[Backend/Laravel/Basics|Laravel · Basics]] — estructura del framework, CLI, config .env, artisan básico.
-- [[Backend/Laravel/Launching|Launching]] — crear/levantar proyecto, perfiles (local/dev/prod), despliegue rápido.
+- [[Backend/Laravel/Creating Laravel Project|Creating Laravel Project]] — requisitos, instalación, npm, composer.
+- [[Backend/Laravel/Launching|Launching]] — levantar proyecto con Valet, MySQL, .env, dominio .test.
 
 ### 2) Capa HTTP
 - [[Backend/Laravel/Controllers|Controllers]] — controladores normales, invocables, resource controllers y rutas.
@@ -38,8 +39,10 @@ Este es el índice principal del área **Backend**. Resume qué hay en la carpet
 - [[Backend/Laravel/Alpine.js|Alpine.js]] — “sprinkles” de interactividad en vistas.
 
 ### 5) Lenguaje y utilidades
-- [[Php Snippet|Php Snippet]] — recordatorios del lenguaje aplicados a Laravel.
-- [[Backend/CORS|CORS]] — (en raíz de Backend) política CORS, configuración y debugging.
+- [[Backend/Laravel/Tinker|Tinker]] — REPL interactivo: queries, agregados, relaciones.
+- [[Backend/Laravel/Php Snippet|Php Snippet]] — switch de versiones PHP, funciones útiles.
+- [[Backend/Switching versions PHP|Switching PHP Versions]] — comandos para cambiar versión de PHP.
+- [[Backend/CORS|CORS]] — política CORS, configuración y debugging.
 
 > Si tienes más notas dentro de `Backend/Laravel/` (p.ej. “Creating Laravel …”), añádelas al grupo correspondiente arriba para mantener el flujo.
 

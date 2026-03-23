@@ -17,3 +17,8 @@
 
 ![[Pasted image 20260114105341.png]]
 
+
+---
+
+## ↩️ Navegación
+- [[Knowledge/Knowledge|🧠 Knowledge]] → [[HOME|🏠 HOME]]

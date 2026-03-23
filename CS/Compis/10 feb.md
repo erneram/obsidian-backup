@@ -673,3 +673,8 @@ S1
 S1 es estado de aceptación.
 
 ---
+
+---
+
+## ↩️ Navegación
+- [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

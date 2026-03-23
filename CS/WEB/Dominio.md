@@ -16,5 +16,5 @@ Comprar servidor AWS, Google Cloud Gratis
 
 AWS GOOODDDD
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[CS/WEB/Web|🌐 Web]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

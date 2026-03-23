@@ -118,5 +118,5 @@ Si Laravel no encuentra `manifest.json`, asegúrate de correr:
 npm run build php artisan optimize:clear
 ```
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

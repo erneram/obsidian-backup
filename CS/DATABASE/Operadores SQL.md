@@ -95,5 +95,5 @@ FROM empleados;
 ```
 			
 
-## ↩️ Volver al HOME
-- [[HOME|🏠 HOME del Vault]]
+## ↩️ Navegación
+- [[CS/DATABASE/Database|🗄️ Database]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

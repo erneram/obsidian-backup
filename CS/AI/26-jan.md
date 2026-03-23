@@ -22,3 +22,8 @@ Refuerzo: Sistemas autónomos en entornos complejos
 
 ## Metricas: 
 Lo que no se mide, no se mejora.
+
+---
+
+## ↩️ Navegación
+- [[CS/AI/ML|🤖 ML Hub]] → [[CS/CS|💻 CS]] → [[HOME|🏠 HOME]]

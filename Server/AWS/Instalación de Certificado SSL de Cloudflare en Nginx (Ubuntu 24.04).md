@@ -125,3 +125,8 @@ En términos prácticos, los Virtual Hosts permiten que un servidor pueda servir
 
 Ahora tu servidor **AWS EC2** con Nginx está protegido con un **Certificado SSL de Cloudflare**. 🚀
 
+
+---
+
+## ↩️ Navegación
+- [[Server/AWS/AWS|☁️ AWS]] → [[Server/Server|🖥️ Server]] → [[HOME|🏠 HOME]]
