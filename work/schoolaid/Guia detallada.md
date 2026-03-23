@@ -83,12 +83,12 @@ echoInstance = new Echo({
 
 ```
 Frontend Vue       Ejabberd Server        Otro usuario
-     │                   │                     │
+     │                    │                     │
      ├── WebSocket ──────►│                     │
      │   (XMPP/WS)        │◄──── WebSocket ─────┤
      │                    │      (XMPP/WS)      │
      │◄── mensaje ────────┤                     │
-     │                    │───── mensaje ───────►│
+     │                    │───── mensaje ──────►│
 ```
 
 **Variables de entorno:**
