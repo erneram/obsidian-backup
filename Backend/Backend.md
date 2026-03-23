@@ -20,27 +20,10 @@ Este es el índice principal del área **Backend**. Resume qué hay en la carpet
 
 ## 🗂️ Índice por temas
 
-### 1) Setup & proyecto
-- [[Backend/Laravel/Basics|Laravel · Basics]] — estructura del framework, CLI, config .env, artisan básico.
-- [[Backend/Laravel/Creating Laravel Project|Creating Laravel Project]] — requisitos, instalación, npm, composer.
-- [[Backend/Laravel/Launching|Launching]] — levantar proyecto con Valet, MySQL, .env, dominio .test.
+### Laravel
+- [[Backend/Laravel/Laravel|📂 Laravel Hub]] — Setup · ORM · HTTP · Frontend · Paquetes Externos.
 
-### 2) Capa HTTP
-- [[Backend/Laravel/Controllers|Controllers]] — controladores normales, invocables, resource controllers y rutas.
-
-### 3) Datos (Eloquent & DB)
-- [[Backend/Laravel/Models|Models]] — modelos, relaciones, scopes, casts.
-- [[Backend/Laravel/Migrations|Migrations]] — esquema, tips para migraciones seguras.
-- [[Backend/Laravel/Factories|Factories]] — generación de datos de prueba.
-- [[Backend/Laravel/Seeder|Seeder]] — estrategias de seed y orden de carga.
-
-### 4) Integración con Frontend
-- [[Backend/Laravel/Inertia.js|Inertia.js]] — SPA sin API tradicional, share props, layouts.
-- [[Backend/Laravel/Alpine.js|Alpine.js]] — “sprinkles” de interactividad en vistas.
-
-### 5) Lenguaje y utilidades
-- [[Backend/Laravel/Tinker|Tinker]] — REPL interactivo: queries, agregados, relaciones.
-- [[Backend/Laravel/Php Snippet|Php Snippet]] — switch de versiones PHP, funciones útiles.
+### Utilidades generales
 - [[Backend/Switching versions PHP|Switching PHP Versions]] — comandos para cambiar versión de PHP.
 - [[Backend/CORS|CORS]] — política CORS, configuración y debugging.
 

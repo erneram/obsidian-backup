@@ -10,4 +10,4 @@ This command will create a file inside `app/Http/Controllers`
 
 
 ## ↩️ Navegación
-- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

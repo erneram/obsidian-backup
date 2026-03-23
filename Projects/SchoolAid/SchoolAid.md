@@ -44,10 +44,10 @@ Sistema de gestión de transporte escolar. Tres proyectos coordinados con múlti
 ## 🔗 Conceptos Relacionados en el Vault
 
 **Backend:**
-- [[Backend/Laravel/Models|Eloquent Models]] — 200+ modelos con multi-tenancy.
-- [[Backend/Laravel/Migrations|Migrations]] — esquema de BD.
-- [[Backend/Laravel/Factories|Factories]] & [[Backend/Laravel/Seeder|Seeders]] — datos de prueba.
-- [[Backend/Laravel/Controllers|Controllers]] — 82+ endpoints API REST.
+- [[Backend/Laravel/ORM/Models|Eloquent Models]] — 200+ modelos con multi-tenancy.
+- [[Backend/Laravel/ORM/Migrations|Migrations]] — esquema de BD.
+- [[Backend/Laravel/ORM/Factories|Factories]] & [[Backend/Laravel/ORM/Seeder|Seeders]] — datos de prueba.
+- [[Backend/Laravel/HTTP/Controllers|Controllers]] — 82+ endpoints API REST.
 
 **Frontend:**
 - [[Frontend/Arquitectura de Modulos/Resumen|Módulos Vue]] — arquitectura de la SPA.

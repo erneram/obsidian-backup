@@ -48,7 +48,7 @@ SCOUT_QUEUE=true                  # indexación async via Redis
 ```
 
 > [!tip] `SCOUT_QUEUE=true`
-> Con esto activado, la indexación se despacha como un Job a la cola de Redis en vez de hacerse sincrónicamente. Esencial en producción para no bloquear el request HTTP. Ver [[Backend/Laravel/Predis|Predis]] para la configuración de queues.
+> Con esto activado, la indexación se despacha como un Job a la cola de Redis en vez de hacerse sincrónicamente. Esencial en producción para no bloquear el request HTTP. Ver [[Backend/Laravel/Packages/Predis|Predis]] para la configuración de queues.
 
 ---
 
@@ -170,4 +170,4 @@ php artisan scout:index users
 ---
 
 ## ↩️ Navegación
-- [[Backend/Laravel/Meilisearch + Predis|🔗 Cómo se complementan]] · [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Packages/Meilisearch + Predis|🔗 Cómo se complementan]] · [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

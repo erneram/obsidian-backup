@@ -25,9 +25,9 @@ tags: [hub, database, sql]
 ## 🔗 Relacionado con otras áreas
 
 - [[CS/NoSQL/NoSQL|NoSQL]] — bases de datos no relacionales.
-- [[Backend/Laravel/Migrations|Laravel Migrations]] — esquema de BD con Eloquent.
-- [[Backend/Laravel/Models|Laravel Models]] — ORM para interactuar con la BD.
-- [[Backend/Laravel/Tinker|Tinker]] — REPL para consultas en tiempo real.
+- [[Backend/Laravel/ORM/Migrations|Laravel Migrations]] — esquema de BD con Eloquent.
+- [[Backend/Laravel/ORM/Models|Laravel Models]] — ORM para interactuar con la BD.
+- [[Backend/Laravel/ORM/Tinker|Tinker]] — REPL para consultas en tiempo real.
 - [[Projects/SchoolAid/SchoolAid|SchoolAid]] — sistema con MySQL + MongoDB + Redis.
 
 ---

@@ -86,4 +86,4 @@ Schema::dropIfExists('users');
 
 
 ## ↩️ Navegación
-- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

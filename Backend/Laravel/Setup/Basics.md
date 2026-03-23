@@ -46,4 +46,4 @@ php artisan view:clear
 - Establece como se relacionan y conectan entre si los modelos, por ende, las tablas en la base de datos. (1:N) (N:M).
 
 ## ↩️ Navegación
-- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

@@ -35,8 +35,8 @@ tags: [hub, frontend]
 
 ## 🔗 Relacionado con otras áreas
 
-- [[Backend/Laravel/Inertia.js|Inertia.js]] — SPA sin API separada (puente Backend ↔ Frontend).
-- [[Backend/Laravel/Alpine.js|Alpine.js]] — interactividad en Blade (alternativa ligera a Vue).
+- [[Backend/Laravel/Frontend/Inertia.js|Inertia.js]] — SPA sin API separada (puente Backend ↔ Frontend).
+- [[Backend/Laravel/Frontend/Alpine.js|Alpine.js]] — interactividad en Blade (alternativa ligera a Vue).
 - [[Server/Server|Server]] — infraestructura donde se despliega el frontend.
 - [[Projects/Projects|Projects]] — proyectos que usan esta arquitectura frontend.
 

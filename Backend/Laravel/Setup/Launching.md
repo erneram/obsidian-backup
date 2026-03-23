@@ -119,4 +119,4 @@ npm run build php artisan optimize:clear
 ```
 
 ## ↩️ Navegación
-- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

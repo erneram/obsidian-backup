@@ -23,7 +23,7 @@ tags: [hub, projects]
 
 | Proyecto | Backend | Frontend | BD | Infraestructura |
 |---------|---------|----------|----|-----------------|
-| SchoolAid | [[Backend/Laravel/Basics\|Laravel 12]] | [[Frontend/Frontend\|Vue 3]] | MySQL + MongoDB + Redis | [[Server/AWS/AWS\|AWS]] |
+| SchoolAid | [[Backend/Laravel/Setup/Basics\|Laravel 12]] | [[Frontend/Frontend\|Vue 3]] | MySQL + MongoDB + Redis | [[Server/AWS/AWS\|AWS]] |
 | Clinic Mgmt | Go / .NET / Node.js | Vue 3 / React | TBD | TBD |
 
 ---

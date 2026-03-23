@@ -97,8 +97,9 @@ When getting the data you can use methods like:
 # bcrypt on thinker
 
 ```
+```
 
 ---
 
 ## ↩️ Navegación
-- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

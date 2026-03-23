@@ -10,4 +10,4 @@ Ventajas:
   Naturaleza minimalista, integra de forma natural con pantallas Blade, permitiendo tener una experiencia "*server-driven*" pero con interactividad en el cliente.
 
 ## ↩️ Navegación
-- [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]
+- [[Backend/Laravel/Laravel|Laravel]] → [[Backend/Backend|🛠️ Backend]] → [[HOME|🏠 HOME]]

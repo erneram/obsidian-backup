@@ -44,7 +44,7 @@ Sistema de gestión clínica. Aún en fase de planeación/brainstorm.
 
 ## 🔗 Stack similar en el vault
 
-- [[Backend/Laravel/Basics|Laravel]] — opción para el backend.
+- [[Backend/Laravel/Setup/Basics|Laravel]] — opción para el backend.
 - [[Frontend/Frontend|Frontend]] — Vue 3 + módulos.
 - [[Frontend/Arquitectura de Modulos/Resumen|Arquitectura de Módulos]] — estructura de la SPA.
 
