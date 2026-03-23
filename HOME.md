@@ -34,6 +34,7 @@ tags: [hub, index]
 | 6 | [[Knowledge/Knowledge\|🧠 Knowledge]] | Data storage, QR codes, Y2K38 |
 | 7 | [[Projects/Projects\|🚀 Projects]] | SchoolAid, Clinic Management |
 | 8 | [[Tools/Tools\|🔧 Tools]] | Claude Code, workflow |
+| 9 | [[Trader/Trader\|📈 Trader]] | Crypto trading con BingX + CCXT MCP |
 
 ---
 
