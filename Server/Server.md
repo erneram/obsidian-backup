@@ -17,6 +17,12 @@ tags: [hub, server, infrastructure]
   - [[Server/AWS/Comprar Dominio|Comprar Dominio]] — registro de dominios en AWS Route 53.
   - [[Server/AWS/Instalación de Certificado SSL de Cloudflare en Nginx (Ubuntu 24.04)|SSL con Cloudflare en Nginx]] — certificado SSL gratis vía Cloudflare.
 
+### 2) IaC & Contenedores
+- [[Server/IaC/IaC|IaC Hub]] — Infrastructure as Code: Docker, Kubernetes, Terraform.
+  - [[Server/IaC/Docker|Docker]] — empaqueta apps en contenedores portables.
+  - [[Server/IaC/Kubernetes|Kubernetes]] — orquesta y escala contenedores en producción.
+  - [[Server/IaC/Terraform|Terraform]] — provisiona infraestructura cloud desde código.
+
 ---
 
 ## 🔗 Relacionado con otras áreas
