@@ -30,6 +30,7 @@ tags: [hub, index]
 | 2 | [[Frontend/Frontend\|🎨 Frontend]] | Vue 3, Vite, Arquitectura de Módulos |
 | 3 | [[CS/CS\|💻 CS]] | Bases de datos, redes, ML, teoría, terminal |
 | 4 | [[Server/Server\|🖥️ Server]] | AWS, EC2, Nginx, SSL, dominios |
+| 4b | [[Cloud/Cloud\|☁️ Cloud]] | S3, CloudFront, Cloudflare, deploy pipeline |
 | 5 | [[DesignPatterns/DesignPatterns\|🏛️ Design Patterns]] | Singleton, Factory, patrones GoF |
 | 6 | [[Knowledge/Knowledge\|🧠 Knowledge]] | Data storage, QR codes, Y2K38 |
 | 7 | [[Projects/Projects\|🚀 Projects]] | SchoolAid, Clinic Management |

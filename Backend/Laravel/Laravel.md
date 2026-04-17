@@ -60,6 +60,7 @@ tags: [hub, laravel, backend]
 - [[Backend/Laravel/Packages/Meilisearch|Meilisearch + Scout]] — búsqueda full-text: typo tolerance, filtros facetados, indexación async.
 - [[Backend/Laravel/Packages/Predis|Predis (Redis)]] — queues, cache, Horizon workers.
 - [[Backend/Laravel/Packages/Meilisearch + Predis|Meilisearch + Predis]] — cómo se complementan: el puente `SCOUT_QUEUE=true`.
+- [[Backend/Laravel/Packages/Tenancy/Tenancy|Tenancy for Laravel]] — multi-tenancy: DB por tenant, Valet + `/etc/hosts`, eventos, middlewares.
 
 ---
 
