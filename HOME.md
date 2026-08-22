@@ -36,6 +36,7 @@ tags: [hub, index]
 | 7 | [[Projects/Projects\|🚀 Projects]] | SchoolAid, Clinic Management |
 | 8 | [[Tools/Tools\|🔧 Tools]] | Claude Code, workflow |
 | 9 | [[Trader/Trader\|📈 Trader]] | Crypto trading con BingX + CCXT MCP |
+| 10 | [[Trading/Trading\|📊 Trading]] | Educación: Fibonacci, Elliott Waves, Futures, Supply & Demand |
 
 ---
 
